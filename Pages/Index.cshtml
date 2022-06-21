@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Index</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr><th>ID_ENTREPRISE</th><th>NOM COMPAGNIE</th><th>TELEPHONE</th><th>COURRIEL</th><th>SITE_WEB</th></tr>
+    </thead>
+    <tbody>
+        @for (int x = 0; x < Model.liste.Count; x++)
+        {
+            <tr>
+                <td><a href="/Formulaire_Modification?id_entreprise=@Model.liste[x].id_entreprise">@Model.liste[x].id_entreprise</td>
+                <td>@Model.liste[x].nom </td>
+                <td>@Model.liste[x].telephone</td>
+                <td>@Model.liste[x].couriel</td>
+                <td>@Model.liste[x].site_web</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Formulaire_Ajout"><button type="button" class="btn btn-success">AJOUTER</button></a>

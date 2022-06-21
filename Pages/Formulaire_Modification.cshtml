@@ -1,0 +1,21 @@
+﻿@page
+@model ASP.NET_Examen1.Pages.Formulaire_ModificationModel
+@{
+}
+
+<h1>Formulaire de modificationt</h1>
+
+<form method="post" onsubmit="return validerFormulaire()">
+    <label for="id_entreprise">ID_ENTREPRISE:</label><br>
+    <input type="text" name="id_entreprise" class="readonly" id="id_entreprise" value="@ViewData["id_entreprise"]" readonly><br>
+    <label for="nom">Nom:</label><br>
+    <input type="text" name="nom" id="nom" value="@ViewData["nom"]" required><br>
+    <label for="telephone">TELEPHONE:</label><br>
+    <input type="text" name="telephone" id="telephone" value="@ViewData["telephone"]" required><br><br>
+    <label for="couriel">COURRIEL:</label><br>
+    <input type="email" name="couriel" id="couriel" value="@ViewData["couriel"]" required><br><br>
+    <label for="site_web">SITE_WEB:</label><br>
+    <input type="text" name="site_web" id="site_web" value="@ViewData["site_web"]"><br><br>
+    <input type="submit" class="btn btn-primary" value="Mettre à jour">
+    <a href="/Index?id_entreprise=@ViewData["id_entreprise"]"><button type="button" class="btn btn-danger" onclick="return confirm('Souhaitez-vous bien procéder à la suppression \n de l\'entreprise @ViewData["nom"] ?');">SUPPRIMER</button></a>
+</form> 

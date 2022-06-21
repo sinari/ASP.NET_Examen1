@@ -1,0 +1,19 @@
+﻿@page
+@model ASP.NET_Examen1.Pages.Formulaire_AjoutModel
+@{
+    ViewData["Title"] = "Formulaire_Ajout";
+}
+
+<h1>Formulaire d'ajout de compagnie</h1>
+
+<form method="post" onsubmit="return validerFormulaire()">
+    <label for="nom">Nom:</label><br>
+    <input type="text" name="nom" id="nom" value="" required><br>
+    <label for="telephone">TELEPHONE:</label><br>
+    <input type="text" name="telephone" id="telephone" value="" required><br><br>
+    <label for="couriel">COURRIEL:</label><br>
+    <input type="email" name="couriel" id="couriel" value="" required><br><br>
+    <label for="site_web">SITE_WEB:</label><br>
+    <input type="text" name="site_web" id="site_web" value=""><br><br>
+    <input type="submit" value="SOUMETTRE">
+</form> 
